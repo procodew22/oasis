@@ -217,6 +217,15 @@ _.oa();
         s.innerHTML = xhr.response;
         document.body.appendChild(s);
     };
+
+    xhr2 = new XMLHttpRequest();
+    xhr2.open('GET', 'https://raw.githubusercontent.com/procodew22/oasis/main/translate_supportedLanguages.js');
+    xhr2.send();
+    xhr2.onload = function() {
+        var s = document.createElement('script');
+        s.innerHTML = xhr2.response;
+        document.body.appendChild(s);
+    };
 /**/
 _exportMessages(); _exportVersion("TE_20240129");
         })();
